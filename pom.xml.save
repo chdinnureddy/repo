@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hello</groupId>
 	<artifactId>helloworldwar</artifactId>
-	<version>2.0</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
@@ -11,7 +11,7 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.hello.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>8.1.5.v20120716</version>
 				<configuration>
