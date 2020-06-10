@@ -1,5 +1,6 @@
 
 source /etc/profile.d/mavenenv.sh
+echo $M2_HOME
 
 sudo update-alternatives --config java
 sudo nano /etc/environment
