@@ -1,16 +1,24 @@
 pipeline {
     agent any
-    stages {
-         stage('git checkout')
+    stages 
+    {
+        stage('git checkout')
+        {
+            steps
         {
             git 'https://github.com/chdinnureddy/repo.git'
         }
+        }
         stage('deploy')
         {
+            steps{
             def mvnhome = tool name: 'maven', type: 'maven'
             sh "${mvnhome}/bin/mvn clean package"
         }
+        }
         stage('Docker image build and push')
+        {
+            steps
         {
                 docker.withRegistry('https://registry.hub.docker.com', 'docker_cred')
                  {
@@ -19,5 +27,6 @@ pipeline {
                     customImage.push()
                  }
         }
+        }   
     }
 }
