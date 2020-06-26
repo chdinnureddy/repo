@@ -1,7 +1,6 @@
 node
 {
-    stages{
-        stage('git checkout')
+         stage('git checkout')
         {
             git 'https://github.com/chdinnureddy/repo.git'
         }
@@ -10,5 +9,5 @@ node
             def mvnhome = tool name: 'maven', type: 'maven'
             sh "${mvnhome}/bin/mvn clean package"
         }
-    }
+
 }
