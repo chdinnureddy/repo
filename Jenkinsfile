@@ -1,5 +1,6 @@
-node
-{
+pipeline {
+    agent any
+    stages {
          stage('git checkout')
         {
             git 'https://github.com/chdinnureddy/repo.git'
@@ -18,5 +19,5 @@ node
                     customImage.push()
                  }
         }
-
+    }
 }
